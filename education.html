@@ -57,10 +57,11 @@
     }
 
     section {
-      color: #fff;
       margin-bottom: 30px;
       padding: 20px;
       border-radius: 8px;
+      color: #000; /* Set text color to black */
+      background-color: #fff; /* Set background color to white */
     }
 
     /* Divide education section into four columns */
@@ -74,18 +75,20 @@
     }
 
     .education-item {
-      width: calc(25% - 20px);
-      padding: 10px;
+      flex: 0 0 calc(25% - 20px);
+      padding: 20px;
       box-sizing: border-box;
-      margin-bottom: 20px;
+      margin: 10px;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
-    /* Different color for the "Education" section */
-    #education {
-      background-color: #673AB7; /* Deep Purple */
-      min-height: 400px; /* Increase the minimum height */
-      display: flex;
-      justify-content: center;
+    /* Education item hover effect */
+    .education-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     }
 
     /* Responsive styles */
@@ -100,7 +103,7 @@
 
       /* On smaller screens, make education items full-width */
       .education-item {
-        width: 100%;
+        flex-basis: 100%;
       }
     }
   </style>
@@ -108,18 +111,17 @@
 
 <body>
   <header>
-    <h1>Your Name</h1>
+    <h1>BADRI VISHAL PANDEY</h1>
     <nav>
       <ul>
         <li><a href="index.html#about">About Me</a></li>
         <li><a href="index.html#experience">Experience</a></li>
-<li><a href="index.html#skills">Skills</a></li>
-<li><a href="index.html#projects">Projects</a></li>
-<li><a href="#education">Education</a></li>
-<li><a href="index.html#contact">Contact</a></li>
-</ul>
-</nav>
-
+        <li><a href="index.html#skills">Skills</a></li>
+        <li><a href="index.html#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
   <main>
     <section id="education">
@@ -127,30 +129,31 @@
       <div class="education-container">
         <div class="education-item">
           <h3>M.TECH</h3>
-		  <p>University/Board: Dr. APJ AKTU Lucknow</p>
+          <p>University/Board: Dr. APJ AKTU Lucknow</p>
           <p>Year of Passing: 2022</p>
-          <p>Percentage/CGPA:</p>
+          <p>Percentage/CGPA: 9.0</p>
         </div>
         <div class="education-item">
-          <h3>M.TECH</h3>
-		  <p>University/Board: Dr. APJ AKTU Lucknow</p>
-          <p>Year of Passing: 2022</p>
-          <p>Percentage/CGPA:</p>
+          <h3>B.TECH</h3>
+          <p>University/Board: Dr. APJ AKTU Lucknow</p>
+          <p>Year of Passing: 2017</p>
+          <p>Percentage/CGPA:73.78</p>
         </div>
         <div class="education-item">
-          <h3>M.TECH</h3>
-		  <p>University/Board: Dr. APJ AKTU Lucknow</p>
-          <p>Year of Passing: 2022</p>
-          <p>Percentage/CGPA:</p>
+          <h3>XII</h3>
+          <p>University/Board: C.B.S.E</p>
+          <p>Year of Passing: 2012</p>
+          <p>Percentage/CGPA:74</p>
         </div>
         <div class="education-item">
-          <h3>M.TECH</h3>
-		  <p>University/Board: Dr. APJ AKTU Lucknow</p>
-          <p>Year of Passing: 2022</p>
-          <p>Percentage/CGPA:</p>
+          <h3>X</h3>
+          <p>University/Board: C.B.S.E</p>
+          <p>Year of Passing: 2010</p>
+          <p>Percentage/CGPA:9.2</p>
         </div>
       </div>
     </section>
   </main>
 </body>
+
 </html>
