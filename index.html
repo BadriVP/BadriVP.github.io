@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Colorful Portfolio</title>
+  <style>
+  
+   /* New style for the profile picture */
+    .profile-picture {
+      display: block;
+      width: 200px; /* Adjust the width as needed */
+      height: auto;
+      border-radius: 50%; /* Makes the image circular for a profile picture effect */
+      margin: 0 auto 10px; /* Adds some space below the image */
+    }
+  
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 0;
+      padding: 0;
+      background-color: #f1f1f1;
+    }
+
+    header {
+      background-color: #4CAF50;
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav li {
+      display: inline;
+      margin-right: 20px;
+    }
+
+    nav a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      max-width: 100%;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 0;
+      font-size: 36px; /* Increase font size for your name */
+    }
+
+    h2 {
+      margin-top: 20px;
+    }
+
+    section {
+      color: #fff;
+      margin-bottom: 30px;
+      padding: 20px;
+      border-radius: 8px;
+    }
+
+    /* Download CV button */
+    .download-btn {
+      display: inline-block;
+      background-color: #2196F3;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      margin-top: 20px;
+    }
+
+    /* Different colors for each section */
+    #about {
+      background-color: #FF5722; /* Deep Orange */
+    }
+
+    #experience {
+      background-color: #E91E63; /* Pink */
+    }
+
+    #skills {
+      background-color: #03A9F4; /* Light Blue */
+    }
+
+    #projects {
+      background-color: #4CAF50; /* Green */
+    }
+
+    #education {
+      background-color: #9C27B0; /* Purple */
+    }
+
+    #contact {
+      background-color: #FF9800; /* Orange */
+    }
+
+    /* Education and skills in two columns */
+    .two-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .two-columns > div {
+      width: calc(50% - 10px);
+    }
+
+    /* Projects in two columns */
+    .project-columns {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .project-item {
+      width: calc(50% - 10px);
+      padding: 10px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+    }
+
+    /* Links in project section */
+    .project-link {
+      color: #fff;
+      text-decoration: none;
+      background-color: #1976D2; /* Dark Blue */
+      padding: 5px 10px;
+      border-radius: 4px;
+    }
+
+    /* Skills in one column with bullet points */
+    .skills-column {
+      column-count: 1;
+    }
+
+    .skills-list {
+      list-style: disc;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Responsive styles */
+    @media screen and (max-width: 600px) {
+      header {
+        font-size: 18px;
+      }
+
+      main {
+        padding: 10px;
+      }
+
+      /* On smaller screens, make education and skills items full-width */
+      .two-columns > div {
+        width: 100%;
+      }
+
+      .project-item {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+   <img src="images/image.jpg" alt="Your Name" class="profile-picture">
+    <h1>BADRI VISHAL PANDEY</h1> <!-- Increased font size for your name -->
+    <nav>
+      <ul>
+        <li><a href="#about">About Me</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        Write a brief introduction about yourself, your skills, and your passion.
+      </p>
+    </section>
+
+    
+
+    <section id="education">
+      <h2>Education</h2>
+      <p>
+        <a href="education.html">View Education Details</a>
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-column">
+        <ul class="skills-list">
+          <li>Web Development</li>
+          <li>Graphic Design</li>
+          <li>Project Management</li>
+          <li>Problem Solving</li>
+          <li>Communication</li>
+          <!-- Add more skills here -->
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="project-columns">
+        <div class="project-item">
+          <h3>Project 1</h3>
+          <p>Description of Project 1</p>
+          <a class="project-link" href="#">Link 1</a>
+        </div>
+        <div class="project-item">
+          <h3>Project 2</h3>
+          <p>Description of Project 2</p>
+          <a class="project-link" href="#">Link 2</a>
+        </div>
+        <!-- Add more project items here -->
+      </div>
+    </section>
+	
+	<section id="contact">
+      <h2>Contact</h2>
+      <p>Phone: +1 123-456-7890</p>
+      <p>Email: yourname@example.com</p>
+    </section>
+
+    <a class="download-btn" href="#">Download CV</a>
+  </main>
+
+</body>
+
+</html>
