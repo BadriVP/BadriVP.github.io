@@ -1,6 +1,6 @@
 - 👋 Hi, I’m @BadriVP
 - 👀 I’m interested in latest Science and Technology
-- 🌱 I’m currently learning Robotics, Embedded system and Automation.
+- 🌱 I have done Training and Tutorials on Robotics, Embedded system and Automation.
 - 💞️ I’m looking to collaborate on doing research on Automation Area.
 - 📫Contact me on badrivishal.pandey896@gmail.com
 
