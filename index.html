@@ -269,6 +269,25 @@ I have 8 months of experience working as Drone Trainer.
     <a class="download-btn" href="https://drive.google.com/file/d/1Zm1lbQGc6lX8PY70kLq1u_rLbJeGB5nq/view?usp=sharing">Download CV</a>
   </main>
 
+	
+<p id="visitCount">Loading...</p>
+
+    <script>
+        // Function to fetch and update the visit count
+        function updateVisitCount() {
+            let count = localStorage.getItem('visitCount');
+            if (!count) {
+                count = 1;
+            } else {
+                count = parseInt(count) + 1;
+            }
+            localStorage.setItem('visitCount', count);
+            document.getElementById('visitCount').textContent = `This page has been visited ${count} times.`;
+        }
+
+        // Call the function to update the visit count when the page loads
+        updateVisitCount();
+    </script>
 </body>
 
 </html>
