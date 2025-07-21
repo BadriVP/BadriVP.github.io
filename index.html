@@ -5,29 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Meta Description for SEO -->
-    <meta name="description" content="Badri Vishal Pandey's professional portfolio showcasing experience in STEM education, robotics, AI, mechatronics engineering, and technical training.">
- 
+    <meta name="description" content="Badri Vishal Pandey's professional portfolio showcasing expertise in STEM education, robotics, AI, mechatronics engineering, technical training, C++, MATLAB, PCB Design, Embedded Systems, and 3D Printing. Explore projects, experience, and skills.">
+
+    <!-- Keywords for SEO -->
+    <meta name="keywords" content="Badri Vishal Pandey, STEM Educator, Robotics, AI, Mechatronics Engineer, Technical Training, Portfolio, C++, MATLAB, PCB Design, Embedded Systems, 3D Printing, Project Management, Curriculum Development, Electronics Engineer, DR. SPRGIC, Playto Labs, TechnoS Instruments, DR. APJ AKTU Lucknow">
+
+    <!-- Open Graph / Social Media Tags for better sharing -->
+    <meta property="og:title" content="Badri Vishal Pandey - STEM & Mechatronics Portfolio">
+    <meta property="og:description" content="Explore the professional journey of Badri Vishal Pandey, a STEM Educator and Mechatronics Engineer specializing in robotics, AI, and embedded systems.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourgithubusername.github.io/your-repo-name/"> <!-- IMPORTANT: Replace with your actual GitHub Pages URL -->
+    <meta property="og:image" content="https://yourgithubusername.github.io/your-repo-name/profile.jpg"> <!-- IMPORTANT: Replace with your actual profile image URL -->
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Badri Vishal Pandey - STEM & Mechatronics Portfolio">
+    <meta name="twitter:description" content="Explore the professional journey of Badri Vishal Pandey, a STEM Educator and Mechatronics Engineer specializing in robotics, AI, and embedded systems.">
+    <meta name="twitter:image" content="https://yourgithubusername.github.io/your-repo-name/profile.jpg"> <!-- IMPORTANT: Replace with your actual profile image URL -->
+
     <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="google3fa11d5122e558e9.html">
 
     <title>Badri Vishal Pandey - Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <!-- Backlink Optimization Tip -->
-    <!-- Suggestion: Build backlinks from STEM blogs, GitHub, LinkedIn, tech forums, educational platforms, or Medium articles that link to this page -->
+    <!-- GitHub Pages SEO Tip: Ensure your repository name matches the URL if you're using a project page.
+         For user/organization pages (username.github.io), the repo should be 'username.github.io'.
+         Use a CNAME file in your repo for custom domains.
+         Add a 'gh-pages' branch for project pages if not using main/master.
+    -->
 
     <style>
         :root {
-            --primary: #2A0944;
-            --secondary: #3B185F;
-            --accent: #A12568;
-            --light: #FEC260;
+            --primary: #1a082b; /* Deeper purple */
+            --secondary: #3d1b6e; /* Richer purple */
+            --accent: #e91e63; /* Vibrant pink */
+            --light: #ffeb3b; /* Bright yellow */
             --text: #ffffff;
+            --card-hover: #4a2d7a; /* Slightly lighter secondary for hover */
+            --gradient-start: #3d1b6e;
+            --gradient-end: #1a082b;
         }
 
         * {
@@ -41,6 +59,7 @@
             background: var(--primary);
             color: var(--text);
             line-height: 1.6;
+            overflow-x: hidden; /* Prevent horizontal scroll due to animations */
         }
 
         .container {
@@ -49,6 +68,7 @@
             padding: 0 20px;
         }
 
+        /* Navigation Bar */
         nav {
             background: var(--secondary);
             padding: 1rem;
@@ -56,13 +76,14 @@
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            transition: background 0.3s ease-in-out;
         }
 
         .nav-links {
             display: flex;
             justify-content: center;
-            gap: 2rem;
+            gap: 2.5rem;
             list-style: none;
         }
 
@@ -70,132 +91,347 @@
             color: var(--text);
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            position: relative;
+            transition: color 0.3s ease-in-out;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 2px;
+            background: var(--light);
+            left: 50%;
+            bottom: -5px;
+            transform: translateX(-50%);
+            transition: width 0.3s ease-in-out;
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
         }
 
         .nav-links a:hover {
             color: var(--light);
         }
 
+        /* Header Section */
         header {
-            padding: 160px 0 80px;
+            padding: 180px 0 100px; /* Increased padding for more space */
             text-align: center;
-            background: linear-gradient(45deg, var(--secondary), var(--primary));
+            background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));
+            position: relative;
+            overflow: hidden; /* For background animations */
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 10%, transparent 70%);
+            animation: background-pulse 15s infinite alternate;
+            z-index: 1;
+        }
+
+        @keyframes background-pulse {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.2); opacity: 1; }
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 220px; /* Slightly larger */
+            height: 220px;
             border-radius: 50%;
-            border: 5px solid var(--light);
-            margin-bottom: 1rem;
+            border: 6px solid var(--light); /* Thicker border */
+            margin-bottom: 1.5rem;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(255,235,59,0.5); /* Glowing effect */
+            transition: transform 0.3s ease-in-out;
         }
 
+        .profile-img:hover {
+            transform: scale(1.05) rotate(2deg);
+        }
+
+        h1 {
+            font-size: 3.5rem; /* Larger heading */
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+
+        header p {
+            font-size: 1.3rem;
+            color: rgba(255,255,255,0.9);
+        }
+
+        .social-links a {
+            color: var(--light); /* Consistent color */
+            margin: 0 1.2rem;
+            transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+            display: inline-block; /* For transform to work */
+        }
+
+        .social-links a:hover {
+            transform: translateY(-5px) scale(1.1);
+            color: var(--accent); /* Change color on hover */
+        }
+
+        /* Section Styling */
         section {
-            padding: 80px 0;
+            padding: 100px 0; /* More vertical space */
+            position: relative;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
             position: relative;
-            font-size: 2.5rem;
+            font-size: 3rem; /* Larger title */
+            color: var(--light); /* Highlighted title */
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
         }
 
         .section-title::after {
             content: '';
-            width: 100px;
-            height: 3px;
-            background: var(--light);
+            width: 120px; /* Longer underline */
+            height: 4px; /* Thicker underline */
+            background: var(--accent); /* Accent color */
             position: absolute;
-            bottom: -10px;
+            bottom: -15px;
             left: 50%;
             transform: translateX(-50%);
+            border-radius: 2px;
         }
 
+        /* Card Styling */
         .card {
             background: var(--secondary);
-            padding: 2rem;
-            margin-bottom: 2rem;
-            border-radius: 10px;
-            transition: transform 0.3s;
-            border: 1px solid rgba(255,255,255,0.1);
+            padding: 2.5rem; /* More padding */
+            margin-bottom: 2.5rem;
+            border-radius: 15px; /* More rounded corners */
+            transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;
+            border: 1px solid rgba(255,255,255,0.15);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+            position: relative; /* For pseudo-elements */
+            overflow: hidden; /* Ensure content stays within bounds */
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.02) 100%);
+            opacity: 0;
+            transition: opacity 0.4s ease-in-out;
+        }
+
+        .card:hover::before {
+            opacity: 1;
         }
 
         .card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px) scale(1.02); /* More pronounced lift */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.5);
+            background: var(--card-hover);
         }
 
         .grid {
             display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem; /* More space between cards */
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger min-width */
         }
 
+        /* Skills Container */
         .skills-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 1rem;
+            gap: 0.8rem; /* Tighter spacing */
+            margin-top: 1.8rem;
         }
 
         .skill {
             background: var(--accent);
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            font-size: 0.9rem;
+            padding: 0.6rem 1.2rem; /* More padding */
+            border-radius: 25px; /* More rounded */
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text);
+            transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
 
+        .skill:hover {
+            background: var(--light);
+            color: var(--primary);
+            transform: translateY(-3px);
+        }
+
+        /* Footer */
         footer {
             background: var(--secondary);
-            padding: 2rem 0;
+            padding: 2.5rem 0;
             text-align: center;
+            box-shadow: 0 -4px 15px rgba(0,0,0,0.4);
         }
 
         .download-btn {
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
+            gap: 0.8rem;
+            padding: 1.2rem 2.5rem; /* More padding */
             background: var(--light);
             color: var(--primary);
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 35px; /* More rounded */
             font-weight: 600;
-            transition: transform 0.3s;
+            font-size: 1.1rem;
+            transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
         }
 
         .download-btn:hover {
-            transform: scale(1.05);
+            transform: scale(1.08) translateY(-3px);
+            background: var(--accent); /* Change color on hover */
+            color: var(--text);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.5);
         }
 
-        .education-details {
-            margin-top: 1rem;
+        #visitor-counter {
+            margin: 2rem 0;
+            font-size: 1.1rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Highlight for experience/education details */
+        .highlight {
+            color: var(--light);
+            font-weight: 600;
+            margin-top: 0.5rem;
+            display: block;
         }
 
         .education-details p {
-            margin: 0.5rem 0;
+            margin: 0.7rem 0;
             display: flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
+            font-size: 1.05rem;
         }
 
         .education-details i {
             color: var(--light);
-            width: 20px;
+            width: 25px; /* Larger icon area */
             text-align: center;
+            font-size: 1.2rem;
         }
 
+        /* Responsive Adjustments */
         @media (max-width: 768px) {
             .nav-links {
                 flex-wrap: wrap;
-                gap: 1rem;
+                gap: 1.5rem;
             }
             header {
-                padding: 120px 0 60px;
+                padding: 150px 0 80px;
+            }
+            h1 {
+                font-size: 2.8rem;
+            }
+            header p {
+                font-size: 1.1rem;
+            }
+            .section-title {
+                font-size: 2.5rem;
+            }
+            .card {
+                padding: 2rem;
+            }
+            .grid {
+                gap: 2rem;
+            }
+            .download-btn {
+                padding: 1rem 2rem;
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 0.8rem;
+            }
+            .nav-links a {
+                padding: 0.5rem 0;
+            }
+            h1 {
+                font-size: 2rem;
+            }
+            header p {
+                font-size: 1rem;
+            }
+            .profile-img {
+                width: 180px;
+                height: 180px;
             }
             .section-title {
                 font-size: 2rem;
             }
+            .card {
+                padding: 1.5rem;
+            }
+            .skill {
+                padding: 0.4rem 0.8rem;
+                font-size: 0.85rem;
+            }
+        }
+
+        /* Scroll-to-top button */
+        #scrollToTopBtn {
+            display: none; /* Hidden by default */
+            position: fixed; /* Fixed/sticky position */
+            bottom: 30px; /* Place the button at the bottom of the page */
+            right: 30px; /* Place the button at the right */
+            z-index: 99; /* Make sure it does not overlap */
+            border: none; /* Remove borders */
+            outline: none; /* Remove outline */
+            background-color: var(--accent); /* Set a background color */
+            color: white; /* Text color */
+            cursor: pointer; /* Add a mouse pointer on hover */
+            padding: 15px; /* Some padding */
+            border-radius: 50%; /* Rounded corners */
+            font-size: 18px; /* Increase font size */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+        }
+
+        #scrollToTopBtn:hover {
+            background-color: var(--light); /* Darker background on hover */
+            color: var(--primary);
+            transform: translateY(-5px) scale(1.1);
+        }
+
+        /* Fade-in animation for sections */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+
+        .fade-in.appear {
+            opacity: 1;
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -213,27 +449,27 @@
     </nav>
 
     <header>
-        <div class="container">
-            <img src="profile.jpg" alt="Profile" class="profile-img">
+        <div class="container header-content">
+            <img src="https://placehold.co/220x220/3B185F/FEC260?text=Profile" alt="Badri Vishal Pandey Profile" class="profile-img">
             <h1>Badri Vishal Pandey</h1>
             <p>STEM Educator | Mechatronics Engineer | Tech Enthusiast</p>
-            <div style="margin: 2rem 0;">
-                <a href="https://linkedin.com/in/badrivp" target="_blank" style="color: var(--light); margin: 0 1rem;">
+            <div class="social-links" style="margin: 2rem 0;">
+                <a href="https://linkedin.com/in/badrivp" target="_blank" aria-label="LinkedIn Profile">
                     <i class="fab fa-linkedin fa-2x"></i>
                 </a>
-                <a href="https://github.com/badrivp" target="_blank" style="color: var(--text); margin: 0 1rem;">
+                <a href="https://github.com/badrivp" target="_blank" aria-label="GitHub Profile">
                     <i class="fab fa-github fa-2x"></i>
                 </a>
             </div>
         </div>
     </header>
 
-    <section id="about">
+    <section id="about" class="fade-in">
         <div class="container">
             <h2 class="section-title">About Me</h2>
             <div class="card">
                 <p>Experienced STEM Educator with 2+ years in robotics and AI instruction. Mechatronics graduate passionate about technology education and innovative projects. Skilled in curriculum development, robotics programming, and technical training.</p>
-                <div class="skills-container" style="margin-top: 1.5rem;">
+                <div class="skills-container">
                     <span class="skill">Robotics</span>
                     <span class="skill">AI Education</span>
                     <span class="skill">Curriculum Development</span>
@@ -244,14 +480,14 @@
         </div>
     </section>
 
-    <section id="experience">
+    <section id="experience" class="fade-in">
         <div class="container">
             <h2 class="section-title">Experience</h2>
             <div class="grid">
                 <div class="card">
                     <h3>STEM Educator</h3>
                     <p class="highlight">DR. SPRGIC · Full-time</p>
-                    <p>Mar 2025 - Present · Lucknow</p>
+                    <p>Mar 2025 - Jun 2025 · Lucknow</p>
                     <ul style="margin-top: 1rem; padding-left: 1.5rem;">
                         <li>Conduct AI and Robotics training for Grade 5-10 students</li>
                         <li>Develop curriculum and manage lab equipment</li>
@@ -271,7 +507,7 @@
                 <div class="card">
                     <h3>Robotics Instructor</h3>
                     <p class="highlight">Playto Labs · Full-time</p>
-                    <p>Sep 2023 - May 2024 · Bengaluru</p>
+                    <p>Sep 2023 - May 2024 · Delhi</p>
                     <ul style="margin-top: 1rem; padding-left: 1.5rem;">
                         <li>Designed robotics learning materials</li>
                         <li>Conducted hands-on workshops</li>
@@ -279,7 +515,7 @@
                     </ul>
                 </div>
                 <div class="card">
-                    <h3>Electronics Engineer</h3>
+                    <h3>Electronics Engineer/Trainer</h3>
                     <p class="highlight">TechnoS Instruments (TCOE Jaipur) · Full-time</p>
                     <p>Sep 2022 - May 2023 · Jaipur</p>
                     <ul style="margin-top: 1rem; padding-left: 1.5rem;">
@@ -292,7 +528,7 @@
         </div>
     </section>
 
-    <section id="education">
+    <section id="education" class="fade-in">
         <div class="container">
             <h2 class="section-title">Education</h2>
             <div class="grid">
@@ -302,7 +538,7 @@
                         <p><i class="fas fa-university"></i> DR. APJ AKTU Lucknow</p>
                         <p><i class="fas fa-calendar-alt"></i> 2020 - 2022</p>
                         <p><i class="fas fa-star"></i> 1st Division</p>
-                        <div class="skills-container" style="margin-top: 1rem;">
+                        <div class="skills-container">
                             <span class="skill">Robotics</span>
                             <span class="skill">Automation</span>
                             <span class="skill">Control Systems</span>
@@ -315,7 +551,7 @@
                         <p><i class="fas fa-university"></i> DR. APJ AKTU Lucknow</p>
                         <p><i class="fas fa-calendar-alt"></i> 2013 - 2017</p>
                         <p><i class="fas fa-star"></i> 1st Division</p>
-                        <div class="skills-container" style="margin-top: 1rem;">
+                        <div class="skills-container">
                             <span class="skill">Embedded Systems</span>
                             <span class="skill">Digital Electronics</span>
                             <span class="skill">VLSI Design</span>
@@ -328,7 +564,7 @@
                         <p><i class="fas fa-school"></i> CBSE Board</p>
                         <p><i class="fas fa-calendar-alt"></i> 2012</p>
                         <p><i class="fas fa-book-open"></i> PCM Stream</p>
-                        <div class="skills-container" style="margin-top: 1rem;">
+                        <div class="skills-container">
                             <span class="skill">Physics</span>
                             <span class="skill">Chemistry</span>
                             <span class="skill">Mathematics</span>
@@ -341,7 +577,7 @@
                         <p><i class="fas fa-school"></i> CBSE Board</p>
                         <p><i class="fas fa-calendar-alt"></i> 2010</p>
                         <p><i class="fas fa-book-open"></i> Science Stream</p>
-                        <div class="skills-container" style="margin-top: 1rem;">
+                        <div class="skills-container">
                             <span class="skill">Mathematics</span>
                             <span class="skill">Science</span>
                             <span class="skill">Social Studies</span>
@@ -352,23 +588,23 @@
         </div>
     </section>
 
-    <section id="projects">
+    <section id="projects" class="fade-in">
         <div class="container">
             <h2 class="section-title">Projects</h2>
             <div class="grid">
                 <div class="card">
-                    <h3>GSM Based Bank Security System</h3>
+                    <h3>GSM Based Bank Locker Security System</h3>
                     <p>Bank locker security system using GSM module and 8051 microcontroller</p>
-                    <div class="skills-container" style="margin-top: 1rem;">
+                    <div class="skills-container">
                         <span class="skill">Embedded C</span>
                         <span class="skill">IoT</span>
                         <span class="skill">PCB Design</span>
                     </div>
                 </div>
                 <div class="card">
-                    <h3>6DOF Robotic Arm MATLAB Simulation</h3>
+                    <h3>6-DOF Robotic Arm MATLAB Simulation</h3>
                     <p>Six degree of freedom robotic arm kinematics and dynamics analysis using Neural Network</p>
-                    <div class="skills-container" style="margin-top: 1rem;">
+                    <div class="skills-container">
                         <span class="skill">MATLAB</span>
                         <span class="skill">Neural Networks</span>
                         <span class="skill">Robotics</span>
@@ -378,7 +614,7 @@
         </div>
     </section>
 
-    <section id="skills">
+    <section id="skills" class="fade-in">
         <div class="container">
             <h2 class="section-title">Skills</h2>
             <div class="card">
@@ -400,7 +636,7 @@
 
     <footer>
         <div class="container">
-            <a href="resume.pdf" download class="download-btn">
+            <a href="bdr_resume_telper (1).pdf" download class="download-btn">
                 <i class="fas fa-download"></i> Download Resume
             </a>
             <div id="visitor-counter" style="margin: 1.5rem 0;">
@@ -410,22 +646,107 @@
         </div>
     </footer>
 
+    <button onclick="scrollToTop()" id="scrollToTopBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
     <script>
         // Smooth scroll for navigation
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Update active class for navigation links
+                    document.querySelectorAll('.nav-links a').forEach(link => link.classList.remove('active'));
+                    this.classList.add('active');
+                }
             });
         });
 
-        // Visitor counter
+        // Highlight active navigation link on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-links a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - sectionHeight / 3) { // Adjust offset for better timing
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Show/hide scroll to top button
+            const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollToTopBtn.style.display = "block";
+                scrollToTopBtn.style.opacity = "1";
+            } else {
+                scrollToTopBtn.style.opacity = "0";
+                setTimeout(() => {
+                    if (scrollToTopBtn.style.opacity === "0") {
+                        scrollToTopBtn.style.display = "none";
+                    }
+                }, 300); // Hide after transition
+            }
+        });
+
+        // Scroll to top function
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        // Visitor counter (using localStorage - for a simple, client-side counter)
+        // For a more robust, server-side counter, you'd need a backend.
         let visits = localStorage.getItem('visits') || 0;
         visits++;
         localStorage.setItem('visits', visits);
         document.getElementById('counter').textContent = visits;
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1 // Trigger when 10% of the element is visible
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('appear');
+                    observer.unobserve(entry.target); // Stop observing once it appears
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Initial check for active nav link on load
+        window.dispatchEvent(new Event('scroll'));
+
+        // Replace placeholder image with your actual profile image
+        // IMPORTANT: Make sure 'profile.jpg' exists in the same directory or update the path.
+        document.querySelector('.profile-img').src = 'profile.jpg';
+        document.querySelector('.profile-img').onerror = function() {
+            this.src = 'https://placehold.co/220x220/3B185F/FEC260?text=Profile'; // Fallback to placeholder
+        };
+
     </script>
 </body>
 </html>
