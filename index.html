@@ -1,535 +1,519 @@
-Add my stem website which looks good in this page stem-verse.42web.io
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Badri Vishal Pandey - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2A0944;
+            --secondary: #3B185F;
+            --accent: #A12568;
+            --light: #FEC260;
+            --text: #ffffff;
+        }
 
-<!DOCTYPE html>  <html lang="en">  
-<head>  
-    <meta charset="UTF-8">  
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">  <!-- Meta Description for SEO -->  
-<meta name="description" content="Badri Vishal Pandey's professional portfolio showcasing expertise in STEM education, robotics, AI, mechatronics engineering, technical training, C++, MATLAB, PCB Design, Embedded Systems, and 3D Printing. Explore projects, experience, and skills.">  
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-<!-- Keywords for SEO -->  
-<meta name="keywords" content="Badri Vishal Pandey, STEM Educator, Robotics, AI, Mechatronics Engineer, Technical Training, Portfolio, C++, MATLAB, PCB Design, Embedded Systems, 3D Printing, Project Management, Curriculum Development, Electronics Engineer, DR. SPRGIC, Playto Labs, TechnoS Instruments, DR. APJ AKTU Lucknow">  
+        body {
+            background: var(--primary);
+            color: var(--text);
+            line-height: 1.6;
+        }
 
-<!-- Open Graph / Social Media Tags for better sharing -->  
-<meta property="og:title" content="Badri Vishal Pandey - STEM & Mechatronics Portfolio">  
-<meta property="og:description" content="Explore the professional journey of Badri Vishal Pandey, a STEM Educator and Mechatronics Engineer specializing in robotics, AI, and embedded systems.">  
-<meta property="og:type" content="website">  
-<meta property="og:url" content="https://yourgithubusername.github.io/your-repo-name/"> <!-- IMPORTANT: Replace with your actual GitHub Pages URL -->  
-<meta property="og:image" content="https://yourgithubusername.github.io/your-repo-name/profile.jpg"> <!-- IMPORTANT: Replace with your actual profile image URL -->  
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-<!-- Twitter Card Tags -->  
-<meta name="twitter:card" content="summary_large_image">  
-<meta name="twitter:title" content="Badri Vishal Pandey - STEM & Mechatronics Portfolio">  
-<meta name="twitter:description" content="Explore the professional journey of Badri Vishal Pandey, a STEM Educator and Mechatronics Engineer specializing in robotics, AI, and embedded systems.">  
-<meta name="twitter:image" content="https://yourgithubusername.github.io/your-repo-name/profile.jpg"> <!-- IMPORTANT: Replace with your actual profile image URL -->  
+        nav {
+            background: var(--secondary);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+        }
 
-<!-- Google Search Console Verification -->  
-<meta name="google-site-verification" content="google3fa11d5122e558e9.html">  
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            list-style: none;
+        }
 
-<title>Badri Vishal Pandey - Portfolio</title>  
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">  
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
 
-<!-- GitHub Pages SEO Tip: Ensure your repository name matches the URL if you're using a project page.  
-     For user/organization pages (username.github.io), the repo should be 'username.github.io'.  
-     Use a CNAME file in your repo for custom domains.  
-     Add a 'gh-pages' branch for project pages if not using main/master.  
--->  
+        .nav-links a:hover {
+            color: var(--light);
+        }
 
-<style>  
-    :root {  
-        --primary: #1a082b; /* Deeper purple */  
-        --secondary: #3d1b6e; /* Richer purple */  
-        --accent: #e91e63; /* Vibrant pink */  
-        --light: #ffeb3b; /* Bright yellow */  
-        --text: #ffffff;  
-        --card-hover: #4a2d7a; /* Slightly lighter secondary for hover */  
-        --gradient-start: #3d1b6e;  
-        --gradient-end: #1a082b;  
-    }  
+        header {
+            padding: 160px 0 80px;
+            text-align: center;
+            background: linear-gradient(45deg, var(--secondary), var(--primary));
+        }
 
-    * {  
-        margin: 0;  
-        padding: 0;  
-        box-sizing: border-box;  
-        font-family: 'Poppins', sans-serif;  
-    }  
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid var(--light);
+            margin-bottom: 1rem;
+        }
 
-    body {  
-        background: var(--primary);  
-        color: var(--text);  
-        line-height: 1.6;  
-        overflow-x: hidden; /* Prevent horizontal scroll due to animations */  
-    }  
+        section {
+            padding: 80px 0;
+        }
 
-    .container {  
-        max-width: 1200px;  
-        margin: 0 auto;  
-        padding: 0 20px;  
-    }  
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            font-size: 2.5rem;
+        }
 
-    /* Navigation Bar */  
-    nav {  
-        background: var(--secondary);  
-        padding: 1rem;  
-        position: fixed;  
-        width: 100%;  
-        top: 0;  
-        z-index: 1000;  
-        box-shadow: 0 4px 15px rgba(0,0,0,0.4);  
-        transition: background 0.3s ease-in-out;  
-    }  
+        .section-title::after {
+            content: '';
+            width: 100px;
+            height: 3px;
+            background: var(--light);
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
 
-    .nav-links {  
-        display: flex;  
-        justify-content: center;  
-        gap: 2.5rem;  
-        list-style: none;  
-    }  
+        .card {
+            background: var(--secondary);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border-radius: 10px;
+            transition: transform 0.3s;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
 
-    .nav-links a {  
-        color: var(--text);  
-        text-decoration: none;  
-        font-weight: 500;  
-        position: relative;  
-        transition: color 0.3s ease-in-out;  
-    }  
+        .card:hover {
+            transform: translateY(-5px);
+        }
 
-    .nav-links a::after {  
-        content: '';  
-        position: absolute;  
-        width: 0%;  
-        height: 2px;  
-        background: var(--light);  
-        left: 50%;  
-        bottom: -5px;  
-        transform: translateX(-50%);  
-        transition: width 0.3s ease-in-out;  
-    }  
+        .grid {
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        }
 
-    .nav-links a:hover::after,  
-    .nav-links a.active::after {  
-        width: 100%;  
-    }  
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
 
-    .nav-links a:hover {  
-        color: var(--light);  
-    }  
+        .skill {
+            background: var(--accent);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
 
-    /* Header Section */  
-    header {  
-        padding: 180px 0 100px; /* Increased padding for more space */  
-        text-align: center;  
-        background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end));  
-        position: relative;  
-        overflow: hidden; /* For background animations */  
-    }  
+        .skill-category {
+            margin-bottom: 2rem;
+        }
 
-    header::before {  
-        content: '';  
-        position: absolute;  
-        top: -50%;  
-        left: -50%;  
-        width: 200%;  
-        height: 200%;  
-        background: radial-gradient(circle at 50% 50%, rgba(255,255,255,0.05) 10%, transparent 70%);  
-        animation: background-pulse 15s infinite alternate;  
-        z-index: 1;  
-    }  
+        .skill-category h4 {
+            color: var(--light);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            border-bottom: 2px solid var(--accent);
+            padding-bottom: 0.5rem;
+        }
 
-    @keyframes background-pulse {  
-        0% { transform: scale(1); opacity: 0.8; }  
-        100% { transform: scale(1.2); opacity: 1; }  
-    }  
+        footer {
+            background: var(--secondary);
+            padding: 2rem 0;
+            text-align: center;
+        }
 
-    .header-content {  
-        position: relative;  
-        z-index: 2;  
-    }  
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 1rem 2rem;
+            background: var(--light);
+            color: var(--primary);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: transform 0.3s;
+        }
 
-    .profile-img {  
-        width: 220px; /* Slightly larger */  
-        height: 220px;  
-        border-radius: 50%;  
-        border: 6px solid var(--light); /* Thicker border */  
-        margin-bottom: 1.5rem;  
-        object-fit: cover;  
-        box-shadow: 0 0 20px rgba(255,235,59,0.5); /* Glowing effect */  
-        transition: transform 0.3s ease-in-out;  
-    }  
+        .download-btn:hover {
+            transform: scale(1.05);
+        }
 
-    .profile-img:hover {  
-        transform: scale(1.05) rotate(2deg);  
-    }  
+        .education-details {
+            margin-top: 1rem;
+        }
 
-    h1 {  
-        font-size: 3.5rem; /* Larger heading */  
-        margin-bottom: 0.5rem;  
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.5);  
-    }  
+        .education-details p {
+            margin: 0.5rem 0;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
 
-    header p {  
-        font-size: 1.3rem;  
-        color: rgba(255,255,255,0.9);  
-    }  
+        .education-details i {
+            color: var(--light);
+            width: 20px;
+            text-align: center;
+        }
 
-    .social-links a {  
-        color: var(--light); /* Consistent color */  
-        margin: 0 1.2rem;  
-        transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;  
-        display: inline-block; /* For transform to work */  
-    }  
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-wrap: wrap;
+                gap: 1rem;
+            }
+            header {
+                padding: 120px 0 60px;
+            }
+            .section-title {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    .social-links a:hover {  
-        transform: translateY(-5px) scale(1.1);  
-        color: var(--accent); /* Change color on hover */  
-    }  
+    <header>
+        <div class="container">
+            <img src="profile.jpg" alt="Profile" class="profile-img">
+            <h1>Badri Vishal Pandey</h1>
+            <p>STEM Educator | Mechatronics Engineer | Tech Enthusiast</p>
+            <div style="margin: 2rem 0;">
+                <a href="https://linkedin.com/in/badrivp" target="_blank" style="color: var(--light); margin: 0 1rem;">
+                    <i class="fab fa-linkedin fa-2x"></i>
+                </a>
+                <a href="https://github.com/badrivp" target="_blank" style="color: var(--text); margin: 0 1rem;">
+                    <i class="fab fa-github fa-2x"></i>
+                </a>
+            </div>
+        </div>
+    </header>
 
-    /* Section Styling */  
-    section {  
-        padding: 100px 0; /* More vertical space */  
-        position: relative;  
-    }  
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="card">
+                <p>Experienced STEM Educator with 2+ years in robotics and AI instruction. Mechatronics graduate passionate about technology education and innovative projects. Skilled in curriculum development, robotics programming, and technical training.</p>
+                <div class="skills-container" style="margin-top: 1.5rem;">
+                    <span class="skill">Robotics</span>
+                    <span class="skill">AI Education</span>
+                    <span class="skill">Curriculum Development</span>
+                    <span class="skill">PCB Design</span>
+                    <span class="skill">C++ Programming</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    .section-title {  
-        text-align: center;  
-        margin-bottom: 4rem;  
-        position: relative;  
-        font-size: 3rem; /* Larger title */  
-        color: var(--light); /* Highlighted title */  
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);  
-    }  
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <div class="grid">
+                <!-- DR. SPRGIC -->
+                <div class="card">
+                    <h3>STEM Educator</h3>
+                    <p class="highlight">DR. SPRGIC · Full-time</p>
+                    <p>Mar 2025 - Present · Lucknow</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Conduct AI and Robotics training for Grade 5-10 students</li>
+                        <li>Develop curriculum and manage lab equipment</li>
+                        <li>Organize STEM workshops and competitions</li>
+                    </ul>
+                </div>
 
-    .section-title::after {  
-        content: '';  
-        width: 120px; /* Longer underline */  
-        height: 4px; /* Thicker underline */  
-        background: var(--accent); /* Accent color */  
-        position: absolute;  
-        bottom: -15px;  
-        left: 50%;  
-        transform: translateX(-50%);  
-        border-radius: 2px;  
-    }  
+                <!-- TCOE Jaipur -->
+                <div class="card">
+                    <h3>Electronics Engineer</h3>
+                    <p class="highlight">TechnoS Instruments (TCOE Jaipur) · Full-time</p>
+                    <p>Sep 2022 - May 2023 · Jaipur</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Taught Drone Technology to engineering students</li>
+                        <li>Performed drone calibration and maintenance</li>
+                        <li>Developed practical training modules</li>
+                    </ul>
+                </div>
 
-    /* Card Styling */  
-    .card {  
-        background: var(--secondary);  
-        padding: 2.5rem; /* More padding */  
-        margin-bottom: 2.5rem;  
-        border-radius: 15px; /* More rounded corners */  
-        transition: transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out, background 0.4s ease-in-out;  
-        border: 1px solid rgba(255,255,255,0.15);  
-        box-shadow: 0 8px 20px rgba(0,0,0,0.3);  
-        position: relative; /* For pseudo-elements */  
-        overflow: hidden; /* Ensure content stays within bounds */  
-    }  
+                <!-- Playto Labs -->
+                <div class="card">
+                    <h3>Robotics Instructor</h3>
+                    <p class="highlight">Playto Labs · Full-time</p>
+                    <p>Sep 2023 - May 2024 · Bengaluru</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Designed robotics learning materials</li>
+                        <li>Conducted hands-on workshops</li>
+                        <li>Managed student projects and competitions</li>
+                    </ul>
+                </div>
 
-    .card::before {  
-        content: '';  
-        position: absolute;  
-        top: 0;  
-        left: 0;  
-        width: 100%;  
-        height: 100%;  
-        background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(255,255,255,0.02) 100%);  
-        opacity: 0;  
-        transition: opacity 0.4s ease-in-out;  
-    }  
+                <!-- Saroj Educational Group -->
+                <div class="card">
+                    <h3>Marketing Team Member</h3>
+                    <p class="highlight">Saroj Educational Group · Full-time</p>
+                    <p>Dec 2024 - Feb 2025 · Lucknow</p>
+                    <ul style="margin-top: 1rem; padding-left: 1.5rem;">
+                        <li>Generated new admissions through outreach programs</li>
+                        <li>Announced new openings and offers to potential students</li>
+                        <li>Coordinated with academic departments for promotional activities</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    .card:hover::before {  
-        opacity: 1;  
-    }  
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="grid">
+                <!-- M.Tech -->
+                <div class="card education-card">
+                    <h3>M.Tech - Mechatronics</h3>
+                    <div class="education-details">
+                        <p><i class="fas fa-university"></i> DR. APJ AKTU Lucknow</p>
+                        <p><i class="fas fa-calendar-alt"></i> 2020 - 2022</p>
+                        <p><i class="fas fa-star"></i> 1st Division</p>
+                        <div class="skills-container" style="margin-top: 1rem;">
+                            <span class="skill">Robotics</span>
+                            <span class="skill">Automation</span>
+                            <span class="skill">Control Systems</span>
+                        </div>
+                    </div>
+                </div>
 
-    .card:hover {  
-        transform: translateY(-10px) scale(1.02); /* More pronounced lift */  
-        box-shadow: 0 15px 30px rgba(0,0,0,0.5);  
-        background: var(--card-hover);  
-    }  
+                <!-- B.Tech -->
+                <div class="card education-card">
+                    <h3>B.Tech - Electronics & Communication</h3>
+                    <div class="education-details">
+                        <p><i class="fas fa-university"></i> DR. APJ AKTU Lucknow</p>
+                        <p><i class="fas fa-calendar-alt"></i> 2013 - 2017</p>
+                        <p><i class="fas fa-star"></i> 1st Division</p>
+                        <div class="skills-container" style="margin-top: 1rem;">
+                            <span class="skill">Embedded Systems</span>
+                            <span class="skill">Digital Electronics</span>
+                            <span class="skill">VLSI Design</span>
+                        </div>
+                    </div>
+                </div>
 
-    .grid {  
-        display: grid;  
-        gap: 3rem; /* More space between cards */  
-        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly larger min-width */  
-    }  
+                <!-- Intermediate -->
+                <div class="card education-card">
+                    <h3>Intermediate (12th)</h3>
+                    <div class="education-details">
+                        <p><i class="fas fa-school"></i> CBSE Board</p>
+                        <p><i class="fas fa-calendar-alt"></i> 2012</p>
+                        <p><i class="fas fa-book-open"></i> PCM Stream</p>
+                        <div class="skills-container" style="margin-top: 1rem;">
+                            <span class="skill">Physics</span>
+                            <span class="skill">Chemistry</span>
+                            <span class="skill">Mathematics</span>
+                        </div>
+                    </div>
+                </div>
 
-    /* Skills Container */  
-    .skills-container {  
-        display: flex;  
-        flex-wrap: wrap;  
-        gap: 0.8rem; /* Tighter spacing */  
-        margin-top: 1.8rem;  
-    }  
+                <!-- High School -->
+                <div class="card education-card">
+                    <h3>High School (10th)</h3>
+                    <div class="education-details">
+                        <p><i class="fas fa-school"></i> CBSE Board</p>
+                        <p><i class="fas fa-calendar-alt"></i> 2010</p>
+                        <p><i class="fas fa-book-open"></i> Science Stream</p>
+                        <div class="skills-container" style="margin-top: 1rem;">
+                            <span class="skill">Mathematics</span>
+                            <span class="skill">Science</span>
+                            <span class="skill">Social Studies</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    .skill {  
-        background: var(--accent);  
-        padding: 0.6rem 1.2rem; /* More padding */  
-        border-radius: 25px; /* More rounded */  
-        font-size: 0.95rem;  
-        font-weight: 500;  
-        color: var(--text);  
-        transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;  
-        box-shadow: 0 2px 5px rgba(0,0,0,0.2);  
-    }  
+    <section id="projects">
+        <div class="container">
+            <h2 class="section-title">Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>GSM Bank Security System</h3>
+                    <p>IoT-based locker security using GSM module and 8051 microcontroller</p>
+                    <div class="skills-container" style="margin-top: 1rem;">
+                        <span class="skill">Embedded C</span>
+                        <span class="skill">IoT</span>
+                        <span class="skill">PCB Design</span>
+                    </div>
+                </div>
 
-    .skill:hover {  
-        background: var(--light);  
-        color: var(--primary);  
-        transform: translateY(-3px);  
-    }  
+                <div class="card">
+                    <h3>6DOF Robotic Arm</h3>
+                    <p>Neural network controlled robotic arm with dynamic analysis</p>
+                    <div class="skills-container" style="margin-top: 1rem;">
+                        <span class="skill">MATLAB</span>
+                        <span class="skill">Neural Networks</span>
+                        <span class="skill">Robotics</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    /* Footer */  
-    footer {  
-        background: var(--secondary);  
-        padding: 2.5rem 0;  
-        text-align: center;  
-        box-shadow: 0 -4px 15px rgba(0,0,0,0.4);  
-    }  
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="card">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <div class="skills-container">
+                        <span class="skill">C</span>
+                        <span class="skill">C++</span>
+                        <span class="skill">Python</span>
+                        <span class="skill">MATLAB</span>
+                        <span class="skill">Embedded C</span>
+                    </div>
+                </div>
 
-    .download-btn {  
-        display: inline-flex;  
-        align-items: center;  
-        gap: 0.8rem;  
-        padding: 1.2rem 2.5rem; /* More padding */  
-        background: var(--light);  
-        color: var(--primary);  
-        text-decoration: none;  
-        border-radius: 35px; /* More rounded */  
-        font-weight: 600;  
-        font-size: 1.1rem;  
-        transition: transform 0.3s ease-in-out, background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  
-        box-shadow: 0 5px 15px rgba(0,0,0,0.3);  
-    }  
+                <div class="skill-category">
+                    <h4>CAD Software</h4>
+                    <div class="skills-container">
+                        <span class="skill">Fusion 360</span>
+                        <span class="skill">FreeCAD</span>
+                        <span class="skill">PCB Design</span>
+                        <span class="skill">3D Modeling</span>
+                    </div>
+                </div>
 
-    .download-btn:hover {  
-        transform: scale(1.08) translateY(-3px);  
-        background: var(--accent); /* Change color on hover */  
-        color: var(--text);  
-        box-shadow: 0 8px 20px rgba(0,0,0,0.5);  
-    }  
+                <div class="skill-category">
+                    <h4>Embedded Systems</h4>
+                    <div class="skills-container">
+                        <span class="skill">Arduino</span>
+                        <span class="skill">NodeMCU</span>
+                        <span class="skill">8051 Microcontroller</span>
+                        <span class="skill">IoT</span>
+                        <span class="skill">Drone Technology</span>
+                    </div>
+                </div>
 
-    #visitor-counter {  
-        margin: 2rem 0;  
-        font-size: 1.1rem;  
-        color: rgba(255,255,255,0.8);  
-    }  
+                <div class="skill-category">
+                    <h4>Web Development</h4>
+                    <div class="skills-container">
+                        <span class="skill">WordPress</span>
+                        <span class="skill">HTML/CSS</span>
+                        <span class="skill">Technical Writing</span>
+                    </div>
+                </div>
 
-    /* Highlight for experience/education details */  
-    .highlight {  
-        color: var(--light);  
-        font-weight: 600;  
-        margin-top: 0.5rem;  
-        display: block;  
-    }  
+                <div class="skill-category">
+                    <h4>Graphic Design</h4>
+                    <div class="skills-container">
+                        <span class="skill">Adobe Photoshop</span>
+                        <span class="skill">Content Creation</span>
+                    </div>
+                </div>
 
-    .education-details p {  
-        margin: 0.7rem 0;  
-        display: flex;  
-        align-items: center;  
-        gap: 1rem;  
-        font-size: 1.05rem;  
-    }  
+                <div class="skill-category">
+                    <h4>MS Office Tools</h4>
+                    <div class="skills-container">
+                        <span class="skill">MS Word</span>
+                        <span class="skill">MS PowerPoint</span>
+                        <span class="skill">MS Excel</span>
+                    </div>
+                </div>
 
-    .education-details i {  
-        color: var(--light);  
-        width: 25px; /* Larger icon area */  
-        text-align: center;  
-        font-size: 1.2rem;  
-    }  
+                <div class="skill-category">
+                    <h4>Operating Systems</h4>
+                    <div class="skills-container">
+                        <span class="skill">Windows 10/11</span>
+                        <span class="skill">Ubuntu</span>
+                        <span class="skill">Linux</span>
+                    </div>
+                </div>
 
-    /* Responsive Adjustments */  
-    @media (max-width: 768px) {  
-        .nav-links {  
-            flex-wrap: wrap;  
-            gap: 1.5rem;  
-        }  
-        header {  
-            padding: 150px 0 80px;  
-        }  
-        h1 {  
-            font-size: 2.8rem;  
-        }  
-        header p {  
-            font-size: 1.1rem;  
-        }  
-        .section-title {  
-            font-size: 2.5rem;  
-        }  
-        .card {  
-            padding: 2rem;  
-        }  
-        .grid {  
-            gap: 2rem;  
-        }  
-        .download-btn {  
-            padding: 1rem 2rem;  
-            font-size: 1rem;  
-        }  
-    }  
+                <div class="skill-category">
+                    <h4>Robotics & AI</h4>
+                    <div class="skills-container">
+                        <span class="skill">Robotic Manipulators</span>
+                        <span class="skill">Mobile Robots</span>
+                        <span class="skill">Drones</span>
+                        <span class="skill">AI Education</span>
+                        <span class="skill">Curriculum Development</span>
+                        <span class="skill">3D Printing</span>
+                    </div>
+                </div>
 
-    @media (max-width: 480px) {  
-        .nav-links {  
-            flex-direction: column;  
-            gap: 0.8rem;  
-        }  
-        .nav-links a {  
-            padding: 0.5rem 0;  
-        }  
-        h1 {  
-            font-size: 2rem;  
-        }  
-        header p {  
-            font-size: 1rem;  
-        }  
-        .profile-img {  
-            width: 180px;  
-            height: 180px;  
-        }  
-        .section-title {  
-            font-size: 2rem;  
-        }  
-        .card {  
-            padding: 1.5rem;  
-        }  
-        .skill {  
-            padding: 0.4rem 0.8rem;  
-            font-size: 0.85rem;  
-        }  
-    }  
+                <div class="skill-category">
+                    <h4>Professional Skills</h4>
+                    <div class="skills-container">
+                        <span class="skill">Project Management</span>
+                        <span class="skill">Team Leadership</span>
+                        <span class="skill">Student Training</span>
+                        <span class="skill">Workshop Management</span>
+                        <span class="skill">Technical Documentation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    /* Scroll-to-top button */  
-    #scrollToTopBtn {  
-        display: none; /* Hidden by default */  
-        position: fixed; /* Fixed/sticky position */  
-        bottom: 30px; /* Place the button at the bottom of the page */  
-        right: 30px; /* Place the button at the right */  
-        z-index: 99; /* Make sure it does not overlap */  
-        border: none; /* Remove borders */  
-        outline: none; /* Remove outline */  
-        background-color: var(--accent); /* Set a background color */  
-        color: white; /* Text color */  
-        cursor: pointer; /* Add a mouse pointer on hover */  
-        padding: 15px; /* Some padding */  
-        border-radius: 50%; /* Rounded corners */  
-        font-size: 18px; /* Increase font size */  
-        box-shadow: 0 4px 10px rgba(0,0,0,0.3);  
-        transition: background-color 0.3s, transform 0.3s, opacity 0.3s;  
-    }  
-
-    #scrollToTopBtn:hover {  
-        background-color: var(--light); /* Darker background on hover */  
-        color: var(--primary);  
-        transform: translateY(-5px) scale(1.1);  
-    }  
-
-    /* Fade-in animation for sections */  
-    .fade-in {  
-        opacity: 0;  
-        transform: translateY(20px);  
-        transition: opacity 0.6s ease-out, transform 0.6s ease-out;  
-    }  
-
-    .fade-in.appear {  
-        opacity: 1;  
-        transform: translateY(0);  
-    }  
-</style>
-
-</head>  
-<body>  
-    <nav>  
-        <div class="container">  
-            <ul class="nav-links">  
-                <li><a href="#about">About</a></li>  
-                <li><a href="#experience">Experience</a></li>  
-                <li><a href="#education">Education</a></li>  
-                <li><a href="#projects">Projects</a></li>  
-                <li><a href="#skills">Skills</a></li>  
-            </ul>  
-        </div>  
-    </nav>  <header>  
-    <div class="container header-content">  
-        <img src="https://placehold.co/220x220/3B185F/FEC260?text=Profile" alt="Badri Vishal Pandey Profile" class="profile-img">  
-        <h1>Badri Vishal Pandey</h1>  
-        <p>STEM Educator | Mechatronics Engineer | Tech Enthusiast</p>  
-        <div class="social-links" style="margin: 2rem 0;">  
-            <a href="https://linkedin.com/in/badrivp" target="_blank" aria-label="LinkedIn Profile">  
-                <i class="fab fa-linkedin fa-2x"></i>  
-            </a>  
-            <a href="https://github.com/badrivp" target="_blank" aria-label="GitHub Profile">  
-                <i class="fab fa-github fa-2x"></i>  
+    <footer>
+        <div class="container">
+            <a href="resume.pdf" download class="download-btn">
+                <i class="fas fa-download"></i> Download Resume
             </a>
+            <div id="visitor-counter" style="margin: 1.5rem 0;">
+                Visitors: <span id="counter">0</span>
+            </div>
+            <p>© 2023 Badri Vishal Pandey. All rights reserved.</p>
+        </div>
+    </footer>
 
-<div class="contact-info" style="margin-top: 10px; text-align: center; font-size: 0.9rem;">  
-  <p style="margin: 4px 0;"><strong>Email:</strong> <a href="mailto:badrivishal.pandey896@gmail.com" style="color: var(--light);">badrivishal.pandey896@gmail.com</a></p>  
-  <p style="margin: 4px 0;"><strong>Phone:</strong> <a href="tel:+918318612241" style="color: var(--light);">+91-8318612241</a></p>  
-</div>  </div>  
-    </div>  
-</header>  
+    <script>
+        // Smooth scroll for navigation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-<section id="about" class="fade-in">  
-    <div class="container">  
-        <h2 class="section-title">About Me</h2>  
-        <div class="card">  
-            <p>Experienced STEM Educator with 2+ years in robotics and AI instruction. Mechatronics graduate passionate about technology education and innovative projects. Skilled in curriculum development, robotics programming, and technical training.</p>  
-            <div class="skills-container">  
-                <span class="skill">Robotics</span>  
-                <span class="skill">AI Education</span>  
-                <span class="skill">Curriculum Development</span>  
-                <span class="skill">PCB Design</span>  
-                <span class="skill">C++ Programming</span>  
-            </div>  
-        </div>  
-    </div>  
-</section>  
-
-<section id="experience" class="fade-in">  
-    <div class="container">  
-        <h2 class="section-title">Experience</h2>  
-        <div class="grid">  
-            <div class="card">  
-                <h3>STEM Educator</h3>  
-                <p class="highlight">DR. SPRGIC · Full-time</p>  
-                <p>Mar 2025 - Jun 2025 · Lucknow</p>  
-                <ul style="margin-top: 1rem; padding-left: 1.5rem;">  
-                    <li>Conduct AI and Robotics training for Grade 5-10 students</li>  
-                    <li>Develop curriculum and manage lab equipment</li>  
-                    <li>Organize STEM workshops and competitions</li>  
-                </ul>  
-            </div>  
-            <div class="card">  
-                <h3>Marketing Team Member</h3>  
-                <p class="highlight">Saroj Educational Group · Full-time</p>  
-                <p>Dec 2024 - Feb 2025 · Lucknow</p>  
-                <ul style="margin-top: 1rem; padding-left: 1.5rem;">  
-                    <li>Generated new admissions through outreach programs</li>  
-                    <li>Announced new openings and offers to potential students</li>  
-                    <li>Coordinated with academic departments for promotional activities</li>  
-                </ul>  
-            </div>  
-            <div class="card">  
-                <h3>Robotics Instructor</h3>  
-                <p class="highlight">Playto Labs · Full-time</p>  
-                <p>Sep 2023 - May 2024 · Delhi</p>  
-                <ul style="margin-top: 1rem; padding-left: 1.5rem;">  
-                    <li>Designed robotics learning materials</li>  
-                    <li>Conducted hands-on workshops</li>  
-                    <li>Managed student projects and competitions</li>  
-                </ul>  
-            </div>  
-            <div class="card">  
-                <h3>Electronics Engineer/Trainer</h3>  
-                <p class="highlight">TechnoS Instruments (TCOE Jaipur) · Full-time</p>  
-                <p>Sep 2022 - May 2023 · Jaipur</p>  
-                <ul style="margin-top: 1rem; padding-left: 1.5rem;">  
-                    <li>Taught Drone Technology to engineering students</li>  
-                    <li>Performed drone calibration and maintenance</li>  
-                    <li>Developed practical training modules</li>  
-                </ul>  
-            </div>  
-        </div>  
-    </div>  
-</section>  
-
-<section id="education" class="fade-in">  
-    <div class="container">  
-        <h2 class="section-title">Education</h2>
+        // Visitor counter
+        let visits = localStorage.getItem('visits') || 0;
+        visits++;
+        localStorage.setItem('visits', visits);
+        document.getElementById('counter').textContent = visits;
+    </script>
+</body>
+</html>
