@@ -1,217 +1,240 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BV Pan Portfolio</title>
 
-    <!-- Meta Description for SEO -->
-    <meta name="description" content="Badri Vishal Pandey's professional portfolio showcasing expertise in STEM education, robotics, AI, mechatronics engineering, technical training, C++, MATLAB, PCB Design, Embedded Systems, and 3D Printing. Explore projects, experience, and skills.">
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-    <!-- Keywords for SEO -->
-    <meta name="keywords" content="Badri Vishal Pandey, STEM Educator, Robotics, AI, Mechatronics Engineer, Technical Training, Portfolio, C++, MATLAB, PCB Design, Embedded Systems, 3D Printing, Project Management, Curriculum Development, Electronics Engineer, DR. SPRGIC, Playto Labs, TechnoS Instruments, DR. APJ AKTU Lucknow">
+<!-- Font Awesome Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Open Graph -->
-    <meta property="og:title" content="Badri Vishal Pandey - STEM & Mechatronics Portfolio">
-    <meta property="og:description" content="Explore the professional journey of Badri Vishal Pandey, a STEM Educator and Mechatronics Engineer specializing in robotics, AI, and embedded systems.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="#">
-    <meta property="og:image" content="#">
+<style>
+/* ----------------- ROOT COLORS ----------------- */
+:root {
+    --bg: #0a0f24;
+    --light: #00eaff;
+    --text: #d8e9ff;
+    --card-bg: rgba(255, 255, 255, 0.04);
+}
 
-    <title>Badri Vishal Pandey - Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+/* ----------------- GLOBAL STYLING ----------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
 
-    <style>
-        :root {
-            --primary: #1a082b;
-            --secondary: #3d1b6e;
-            --accent: #e91e63;
-            --light: #ffeb3b;
-            --text: #ffffff;
-            --card-hover: #4a2d7a;
-            --gradient-start: #3d1b6e;
-            --gradient-end: #1a082b;
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Poppins', sans-serif; }
-        body { background: var(--primary); color: var(--text); line-height: 1.6; overflow-x: hidden; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+body {
+    background: var(--bg);
+    color: var(--text);
+    overflow-x: hidden;
+}
 
-        /* Navigation */
-        nav { background: var(--secondary); padding: 1rem; position: fixed; width: 100%; top: 0; z-index: 1000; box-shadow: 0 4px 15px rgba(0,0,0,0.4); }
-        .nav-links { display: flex; justify-content: center; gap: 2.5rem; list-style: none; }
-        .nav-links a { color: var(--text); text-decoration: none; font-weight: 500; position: relative; }
-        .nav-links a::after { content: ''; position: absolute; width: 0%; height: 2px; background: var(--light); left: 50%; bottom: -5px; transform: translateX(-50%); transition: width 0.3s; }
-        .nav-links a:hover::after, .nav-links a.active::after { width: 100%; }
-        .nav-links a:hover { color: var(--light); }
+/* ----------------- NAVBAR ----------------- */
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(10, 15, 36, 0.9);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        /* Header */
-        header { padding: 180px 0 100px; text-align: center; background: linear-gradient(45deg, var(--gradient-start), var(--gradient-end)); position: relative; }
-        .header-content { position: relative; z-index: 2; }
-        .profile-img { width: 220px; height: 220px; border-radius: 50%; border: 6px solid var(--light); box-shadow: 0 0 20px rgba(255,235,59,0.5); }
+nav h1 {
+    color: var(--light);
+}
 
-        h1 { font-size: 3.5rem; margin-bottom: 0.5rem; }
-        header p { font-size: 1.3rem; }
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-        /* Sections */
-        section { padding: 100px 0; }
-        .section-title { text-align: center; font-size: 3rem; color: var(--light); margin-bottom: 4rem; position: relative; }
-        .section-title::after { content: ''; width: 120px; height: 4px; background: var(--accent); position: absolute; bottom: -15px; left: 50%; transform: translateX(-50%); }
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    transition: 0.3s;
+}
 
-        /* Card */
-        .card {
-            background: var(--secondary);
-            padding: 2.5rem;
-            margin-bottom: 2.5rem;
-            border-radius: 15px;
-            transition: 0.4s;
-            border: 1px solid rgba(255,255,255,0.15);
-            box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-        }
-        .card:hover { transform: translateY(-10px); background: var(--card-hover); }
+nav a:hover {
+    color: var(--light);
+}
 
-        .grid { display: grid; gap: 3rem; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+/* ----------------- SECTIONS ----------------- */
+section {
+    padding: 6rem 2rem;
+    min-height: 100vh;
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeUp 1s forwards;
+}
 
-        /* Skills */
-        .skills-container { display: flex; flex-wrap: wrap; gap: .8rem; margin-top: 1.8rem; }
-        .skill { background: var(--accent); padding: .6rem 1.2rem; border-radius: 25px; }
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
 
-        /* Footer */
-        footer { background: var(--secondary); padding: 2.5rem 0; text-align: center; }
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--light);
+    margin-bottom: 3rem;
+}
 
-        /* Buttons */
-        .download-btn {
-            display: inline-flex;
-            gap: .7rem;
-            align-items: center;
-            background: var(--light);
-            color: var(--primary);
-            padding: 1rem 2rem;
-            border-radius: 30px;
-            font-weight: 600;
-            text-decoration: none;
-        }
+/* ----------------- HERO SECTION ----------------- */
+.hero {
+    text-align: center;
+    padding-top: 8rem;
+}
 
-        /* Fade in animation */
-        .fade-in { opacity: 0; transform: translateY(20px); transition: .6s; }
-        .fade-in.appear { opacity: 1; transform: translateY(0); }
-    </style>
+.hero h2 {
+    font-size: 3rem;
+    color: var(--light);
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* ----------------- CARDS ----------------- */
+.card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 15px;
+    margin-top: 2rem;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ----------------- BUTTONS ----------------- */
+.download-btn {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+    background: var(--light);
+    color: #000;
+    border-radius: 8px;
+    margin-top: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.download-btn:hover {
+    background: #fff;
+}
+
+/* ----------------- ANIMATION ----------------- */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ----------------- RESPONSIVE ----------------- */
+@media (max-width: 768px) {
+    nav ul { 
+        gap: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <!-- NAVIGATION -->
-    <nav>
-        <div class="container">
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#education">Education</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
+<!-- ----------------- NAVBAR ----------------- -->
+<nav>
+    <h1>BV Pan</h1>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#stem-website">STEM Website</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-                <!-- Added STEM Website -->
-                <li><a href="#stem-website">STEM Website</a></li>
-            </ul>
+<!-- ----------------- HERO SECTION ----------------- -->
+<section id="home" class="hero">
+    <h2>Welcome to My Portfolio</h2>
+    <p>Robotics • STEM • Android Apps • Web Development</p>
+</section>
+
+<!-- ----------------- PROJECTS ----------------- -->
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">My Projects</h2>
+
+        <div class="card">
+            <h3>PhysicsSimulationHub</h3>
+            <p>An Android app providing physics simulations and notes.</p>
+            <a class="download-btn" href="#">View Project</a>
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- HEADER -->
-    <header>
-        <div class="container header-content">
-            <img src="https://placehold.co/220x220/3B185F/FEC260?text=Profile" class="profile-img">
-            <h1>Badri Vishal Pandey</h1>
-            <p>STEM Educator | Mechatronics Engineer | Tech Enthusiast</p>
+<!-- ----------------- STEM WEBSITE SECTION ----------------- -->
+<section id="stem-website">
+    <div class="container">
+        <h2 class="section-title">My STEM Website</h2>
 
-            <div class="social-links" style="margin: 2rem 0;">
-                <a href="https://linkedin.com/in/badrivp" target="_blank"><i class="fab fa-linkedin fa-2x"></i></a>
-                <a href="https://github.com/badrivp" target="_blank"><i class="fab fa-github fa-2x"></i></a>
+        <div class="card" style="text-align: center;">
+            <h3>STEM-Verse</h3>
+            <p style="margin: 1rem 0; font-size: 1.1rem;">
+                Explore my interactive STEM learning platform built for students and educators.
+            </p>
 
-                <div class="contact-info" style="margin-top: 10px;">
-                    <p><strong>Email:</strong> <a href="mailto:badrivishal.pandey896@gmail.com" style="color: var(--light);">badrivishal.pandey896@gmail.com</a></p>
-                    <p><strong>Phone:</strong> <a href="tel:+918318612241" style="color: var(--light);">+91-8318612241</a></p>
-                </div>
+            <div style="
+                width: 100%;
+                height: 400px;
+                border: 3px solid var(--light);
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+                margin-bottom: 1.5rem;
+            ">
+                <iframe 
+                    src="https://stem-verse.42web.io"
+                    style="width: 100%; height: 100%; border: none;"
+                    loading="lazy">
+                </iframe>
             </div>
+
+            <a href="https://stem-verse.42web.io" target="_blank" class="download-btn">
+                Visit STEM Website <i class="fas fa-arrow-right"></i>
+            </a>
         </div>
-    </header>
+    </div>
+</section>
 
-    <!-- ABOUT -->
-    <section id="about" class="fade-in">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="card">
-                <p>Experienced STEM Educator with 2+ years in robotics and AI instruction.</p>
-                <div class="skills-container">
-                    <span class="skill">Robotics</span>
-                    <span class="skill">AI Education</span>
-                    <span class="skill">Curriculum Development</span>
-                    <span class="skill">PCB Design</span>
-                    <span class="skill">C++ Programming</span>
-                </div>
-            </div>
+<!-- ----------------- CONTACT SECTION ----------------- -->
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <div class="card">
+            <p><strong>Name:</strong> BV Pan</p>
+            <p><strong>Email:</strong> badrivishal.pandey896@gmail.com</p>
+            <p><strong>Phone:</strong> +91 8318612241</p>
         </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section id="experience" class="fade-in">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="grid">
-                <div class="card"><h3>STEM Educator</h3><p>DR. SPRGIC · 2025</p></div>
-                <div class="card"><h3>Marketing Team</h3><p>Saroj Group · 2024</p></div>
-                <div class="card"><h3>Robotics Instructor</h3><p>Playto Labs · 2023</p></div>
-                <div class="card"><h3>Electronics Engineer</h3><p>TechnoS Instruments · 2022</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section id="education" class="fade-in">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="card">
-                <p>B.Tech in Mechatronics Engineering</p>
-                <p>AKTU Lucknow</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ⭐ ADDED NEW STEM WEBSITE SECTION ⭐ -->
-    <section id="stem-website" class="fade-in">
-        <div class="container">
-            <h2 class="section-title">My STEM Website</h2>
-
-            <div class="card" style="text-align: center;">
-                <h3>STEM-Verse</h3>
-                <p style="margin: 1rem 0; font-size: 1.1rem;">
-                    Explore my interactive STEM learning website for students and educators.
-                </p>
-
-                <!-- LIVE PREVIEW -->
-                <div style="
-                    width: 100%;
-                    height: 400px;
-                    border: 3px solid var(--light);
-                    border-radius: 15px;
-                    overflow: hidden;
-                    margin-bottom: 1.5rem;
-                ">
-                    <iframe 
-                        src="https://stem-verse.42web.io" 
-                        style="width: 100%; height: 100%; border: none;" 
-                        loading="lazy">
-                    </iframe>
-                </div>
-
-                <a href="https://stem-verse.42web.io" target="_blank" class="download-btn">
-                    Visit STEM Website <i class="fas fa-arrow-right"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 Badri Vishal Pandey | All Rights Reserved</p>
-    </footer>
+    </div>
+</section>
 
 </body>
 </html>
